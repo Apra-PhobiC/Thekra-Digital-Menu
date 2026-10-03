@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f1e7">
+  <meta name="description" content="Portrait-first digital menu prototype">
+  <title>Digital Menu Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-btn" id="backBtn" aria-label="Back">←</button>
+      <img src="assets/brand-mark.svg" class="brand-mark" alt="Brand mark">
+      <button class="icon-btn" id="menuBtn" aria-label="Menu">☰</button>
+    </header>
+
+    <main id="menuViewport" class="viewport" aria-live="polite">
+      <section class="vertical-section intro-section" data-category="intro">
+        <div class="intro-copy">
+          <span class="eyebrow">DIGITAL MENU</span>
+          <h1>Good things<br><em>start here.</em></h1>
+          <p>Fresh • Creamy • Happy</p>
+          <button class="primary-btn" data-jump="flavors">Explore Flavors <span>→</span></button>
+        </div>
+        <div class="hero-cup hero-pink">
+          <div class="cup-lid"></div><div class="softserve pink"></div>
+          <div class="cup-body"><img src="assets/brand-mark.svg" alt=""></div>
+        </div>
+        <div class="swipe-hint vertical-hint">Swipe up <span>↑</span></div>
+      </section>
+
+      <section class="vertical-section" data-category="flavors">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">01 · FLAVORS</span>
+            <h2>All Flavors</h2>
+            <p>Pick your perfect scoop</p>
+          </div>
+          <div class="counter" id="flavorCounter">01 / 06</div>
+        </div>
+
+        <div class="horizontal-track" id="flavorTrack">
+          <article class="product-card" data-title="Mango" data-ar="مانجو" data-price="12" data-desc="Smooth mango flavor with a creamy finish.">
+            <div class="product-visual mango"><div class="cup-lid"></div><div class="softserve"></div><div class="cup-body"><img src="assets/brand-mark.svg" alt=""></div></div>
+            <div class="product-meta"><h3>Mango</h3><span>مانجو</span><b>SAR 12</b></div>
+          </article>
+          <article class="product-card" data-title="Raspberry" data-ar="توت العليق" data-price="12" data-desc="Bright berry flavor with a soft creamy texture.">
+            <div class="product-visual raspberry"><div class="cup-lid"></div><div class="softserve"></div><div class="cup-body"><img src="assets/brand-mark.svg" alt=""></div></div>
+            <div class="product-meta"><h3>Raspberry</h3><span>توت العليق</span><b>SAR 12</b></div>
+          </article>
+          <article class="product-card" data-title="Chocolate" data-ar="شوكولاتة" data-price="14" data-desc="Deep chocolate flavor, rich and silky.">
+            <div class="product-visual chocolate"><div class="cup-lid"></div><div class="softserve"></div><div class="cup-body"><img src="assets/brand-mark.svg" alt=""></div></div>
+            <div class="product-meta"><h3>Chocolate</h3><span>شوكولاتة</span><b>SAR 14</b></div>
+          </article>
+          <article class="product-card" data-title="Vanilla" data-ar="فانيلا" data-price="12" data-desc="Classic vanilla with a delicate creamy aroma.">
+            <div class="product-visual vanilla"><div class="cup-lid"></div><div class="softserve"></div><div class="cup-body"><img src="assets/brand-mark.svg" alt=""></div></div>
+            <div class="product-meta"><h3>Vanilla</h3><span>فانيلا</span><b>SAR 12</b></div>
+          </article>
+          <article class="product-card" data-title="Strawberry" data-ar="فراولة" data-price="13" data-desc="Creamy strawberry flavor with a fresh finish.">
+            <div class="product-visual strawberry"><div class="cup-lid"></div><div class="softserve"></div><div class="cup-body"><img src="assets/brand-mark.svg" alt=""></div></div>
+            <div class="product-meta"><h3>Strawberry</h3><span>فراولة</span><b>SAR 13</b></div>
+          </article>
+          <article class="product-card" data-title="Melon" data-ar="بطيخ شمام" data-price="13" data-desc="Light melon flavor with a cool, smooth finish.">
+            <div class="product-visual melon"><div class="cup-lid"></div><div class="softserve"></div><div class="cup-body"><img src="assets/brand-mark.svg" alt=""></div></div>
+            <div class="product-meta"><h3>Melon</h3><span>بطيخ شمام</span><b>SAR 13</b></div>
+          </article>
+        </div>
+        <div class="swipe-hint">Swipe left / right <span>↔</span></div>
+      </section>
+
+      <section class="vertical-section detail-section" data-category="flavor-detail">
+        <div class="detail-panel">
+          <div class="detail-visual mango" id="detailVisual"><div class="cup-lid"></div><div class="softserve"></div><div class="cup-body"><img src="assets/brand-mark.svg" alt=""></div></div>
+          <div class="detail-copy">
+            <span class="eyebrow">FLAVOR</span>
+            <h2 id="detailTitle">Mango</h2>
+            <div class="arabic" id="detailAr">مانجو</div>
+            <p id="detailDesc">Smooth mango flavor with a creamy finish.</p>
+            <div class="price-pill" id="detailPrice">SAR 12</div>
+            <button class="primary-btn" id="nextFlavor">Next flavor <span>→</span></button>
+          </div>
+        </div>
+        <div class="swipe-hint">Swipe left / right <span>↔</span></div>
+      </section>
+
+      <section class="vertical-section" data-category="milkshakes">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">02 · MILKSHAKES</span>
+            <h2>Milkshake Favorites</h2>
+            <p>Thick. Creamy. Irresistible.</p>
+          </div>
+          <div class="counter" id="shakeCounter">01 / 05</div>
+        </div>
+        <div class="horizontal-track" id="shakeTrack">
+          <article class="product-card shake-card" data-title="Oreo" data-ar="أوريو" data-price="16" data-desc="Cookies & cream milkshake with a rich, chilled finish."><div class="shake-visual oreo"><span>OREO</span></div><div class="product-meta"><h3>Oreo</h3><span>أوريو</span><b>SAR 16</b></div></article>
+          <article class="product-card shake-card" data-title="Lotus" data-ar="لوتس" data-price="16" data-desc="Caramel biscuit milkshake, smooth and indulgent."><div class="shake-visual lotus"><span>LOTUS</span></div><div class="product-meta"><h3>Lotus</h3><span>لوتس</span><b>SAR 16</b></div></article>
+          <article class="product-card shake-card" data-title="Chocolate" data-ar="شوكولاتة" data-price="15" data-desc="Classic chocolate milkshake with a velvety texture."><div class="shake-visual choco"><span>CHOCOLATE</span></div><div class="product-meta"><h3>Chocolate</h3><span>شوكولاتة</span><b>SAR 15</b></div></article>
+          <article class="product-card shake-card" data-title="Strawberry" data-ar="فراولة" data-price="15" data-desc="Creamy strawberry milkshake with a bright berry note."><div class="shake-visual shake-strawberry"><span>STRAWBERRY</span></div><div class="product-meta"><h3>Strawberry</h3><span>فراولة</span><b>SAR 15</b></div></article>
+          <article class="product-card shake-card" data-title="Vanilla" data-ar="فانيلا" data-price="15" data-desc="Silky vanilla milkshake, simple and creamy."><div class="shake-visual shake-vanilla"><span>VANILLA</span></div><div class="product-meta"><h3>Vanilla</h3><span>فانيلا</span><b>SAR 15</b></div></article>
+        </div>
+        <div class="swipe-hint">Swipe left / right <span>↔</span></div>
+      </section>
+
+      <section class="vertical-section detail-section" data-category="shake-detail">
+        <div class="detail-panel">
+          <div class="shake-visual large-shake" id="shakeDetailVisual"><span>OREO</span></div>
+          <div class="detail-copy">
+            <span class="eyebrow">MILKSHAKE</span>
+            <h2 id="shakeDetailTitle">Oreo</h2>
+            <div class="arabic" id="shakeDetailAr">أوريو</div>
+            <p id="shakeDetailDesc">Cookies & cream milkshake with a rich, chilled finish.</p>
+            <div class="price-pill" id="shakeDetailPrice">SAR 16</div>
+            <button class="primary-btn" id="nextShake">Next shake <span>→</span></button>
+          </div>
+        </div>
+        <div class="swipe-hint">Swipe left / right <span>↔</span></div>
+      </section>
+
+      <section class="vertical-section" data-category="special">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">03 · SPECIAL</span>
+            <h2>Special</h2>
+            <p>Sweet endings & signature treats</p>
+          </div>
+        </div>
+        <div class="special-grid">
+          <article class="special-card" data-title="Tiramisu" data-price="18"><div class="dessert tiramisu"></div><h3>Tiramisu</h3><span>تيراميسو</span><b>SAR 18</b></article>
+          <article class="special-card" data-title="Chocolate Special" data-price="14"><div class="dessert pudding"></div><h3>Chocolate Special</h3><span>شوكولاتة</span><b>SAR 14</b></article>
+          <article class="special-card" data-title="Caramel Cup" data-price="16"><div class="dessert caramel"></div><h3>Caramel Cup</h3><span>كراميل</span><b>SAR 16</b></article>
+          <article class="special-card" data-title="Cream Delight" data-price="15"><div class="dessert cream"></div><h3>Cream Delight</h3><span>كريمة</span><b>SAR 15</b></article>
+        </div>
+        <div class="swipe-hint vertical-hint">End of menu <span>↓</span></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-jump="intro">Home</button>
+      <button class="nav-item" data-jump="flavors">Flavors</button>
+      <button class="nav-item" data-jump="milkshakes">Milkshakes</button>
+      <button class="nav-item" data-jump="special">Special</button>
+    </nav>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
